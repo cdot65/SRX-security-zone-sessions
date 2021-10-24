@@ -1,0 +1,9 @@
+---
+all:
+  children:
+    firewalls:
+      hosts:
+        galveston:
+          ansible_host: 192.168.105.137
+        sanantonio:
+          ansible_host: 192.168.105.146

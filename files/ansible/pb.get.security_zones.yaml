@@ -1,0 +1,75 @@
+###------------------------------------------------------------------------
+### RETRIEVE SECURITY SESSION FLOWS BY ZONE
+###------------------------------------------------------------------------
+- hosts: all
+  connection: local
+  gather_facts: False
+  become: False
+  roles: 
+    - juniper.junos
+  tasks:
+
+    - name: "### RETRIEVE SECURITY ZONE INFORMATION ###"
+      block:
+
+        - name: "retrieve security zone information"
+          juniper_junos_rpc:
+            rpc: get-zones-information
+          register: zone_information
+
+        # - name: "print output to screen"
+        #   debug:
+        #     msg: "{{ zone_information }}"
+
+    - name: "### MAP INTERFACES TO NEW LIST OBJECTS ###"
+      block:
+
+        - name: "map zone DMZ_LAB interfaces"
+          ansible.builtin.set_fact:
+            zone_ifaces: "{{ zone_information['parsed_output'] | get_zone_interfaces  }}"
+
+        # - name: "print output to screen"
+        #   debug:
+        #     msg: "{{ zone_ifaces }}"
+
+    - name: "### RETRIEVE SECURITY FLOWS PER INTERFACE ###"
+      block:
+
+        - name: "retrieve security flows per DMZ_LAB interface"
+          juniper_junos_rpc:
+            rpc: get-flow-session-information
+            kwargs:
+              interface: "{{ item }}"
+              summary: null
+          loop: "{{ zone_ifaces['dmz_lab_interfaces'] }}"
+          register: flows_dmz_lab
+
+        - name: "run through build_report filter plugin"
+          debug:
+            msg: "{{ flows_dmz_lab['results'] | build_report }}"
+
+        - name: "retrieve security flows per INTERNET interface"
+          juniper_junos_rpc:
+            rpc: get-flow-session-information
+            kwargs:
+              interface: "{{ item }}"
+              summary: null
+          loop: "{{ zone_ifaces['internet_interfaces'] }}"
+          register: flows_internet
+
+        - name: "run through build_report filter plugin"
+          debug:
+            msg: "{{ flows_internet['results'] | build_report }}"
+
+        - name: "retrieve security flows per HOME interface"
+          juniper_junos_rpc:
+            rpc: get-flow-session-information
+            kwargs:
+              interface: "{{ item }}"
+              summary: null
+          loop: "{{ zone_ifaces['home_interfaces'] }}"
+          register: flows_home
+
+        - name: "run through build_report filter plugin"
+          debug:
+            msg: "{{ flows_home['results'] | build_report }}"
