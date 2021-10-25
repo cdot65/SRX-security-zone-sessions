@@ -1,4 +1,4 @@
-# Ansible Automation Example: Retrieve Session Count by Zone
+# Retrieve Session Count by Zone with Ansible
 
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/3/31/Juniper_Networks_logo.svg)](https://junos-ansible-modules.readthedocs.io/en/stable/)
 
