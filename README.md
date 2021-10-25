@@ -1,4 +1,4 @@
-# Retrieve count security sessions by zone with Ansible
+# Retrieve security sessions count by zone with Ansible
 
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/3/31/Juniper_Networks_logo.svg)](https://junos-ansible-modules.readthedocs.io/en/stable/)
 
