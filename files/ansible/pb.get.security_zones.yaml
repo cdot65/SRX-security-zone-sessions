@@ -84,9 +84,13 @@
             dest: "tmp/slack.yaml"
             mode: 0640
 
+        - name: "Set Firewall Channel"
+          ansible.builtin.set_fact:
+            firewall_channel: "T012XL7SBCM/B036GHK2N01/iZNIlidLJK9CBLTIGBh9Wspa"
+
         - name: "Slack: post slack message"
           ansible.builtin.uri:
-            url: "https://hooks.slack.com/services/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"
+            url: "https://hooks.slack.com/services/{{ firewall_channel }}"
             return_content: yes
             status_code: 200
             method: POST
