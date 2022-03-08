@@ -75,3 +75,20 @@
         - name: "run through build_report filter plugin"
           ansible.builtin.set_fact:
             flows_lan: "{{ flows_lan['results'] | build_report }}"
+
+    - name: Slack - Notify team
+      block:
+        - name: "Slack: create YAML file for notification"
+          ansible.builtin.template:
+            src: "templates/slack.j2"
+            dest: "tmp/slack.yaml"
+            mode: 0640
+
+        - name: "Slack: post slack message"
+          ansible.builtin.uri:
+            url: "https://hooks.slack.com/services/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"
+            return_content: yes
+            status_code: 200
+            method: POST
+            body: "{{ lookup('file', 'tmp/slack.yaml' ) | from_yaml | to_json }}"
+            body_format: json
