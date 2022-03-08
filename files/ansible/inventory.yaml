@@ -3,7 +3,11 @@ all:
   children:
     firewalls:
       hosts:
-        galveston:
-          ansible_host: 192.168.105.137
-        sanantonio:
-          ansible_host: 192.168.105.146
+        vsrx2:
+          ansible_host: 192.168.105.196
+        vsrx3:
+          ansible_host: 192.168.105.167
+        vsrx4:
+          ansible_host: 192.168.105.221
+  vars:
+    ansible_python_interpreter: /home/cdot/.cache/pypoetry/virtualenvs/zone-sessions-XQD2MegU-py3.8/bin/python

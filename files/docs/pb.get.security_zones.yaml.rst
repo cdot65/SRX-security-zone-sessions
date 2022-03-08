@@ -53,11 +53,11 @@ Here's an example of what `zone_information` should look like:
     "kwargs": null,
     "attrs": null,
     "changed": false,
-    "stdout": "<zones-information style=\"detail\">\n  <zones-security>\n    <zones-security-zonename>DMZ_LAB</zones-security-zonename>\n    <zone-id>12</zone-id>\n    <zones-security-description>all lab resources outside of VMware hosts</zones-security-description>\n    <zones-security-send-reset>On</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>3</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/3.201</zones-security-interface-name>\n      <zones-security-interface-name>ge-0/0/3.202</zones-security-interface-name>\n      <zones-security-interface-name>ge-0/0/3.203</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>HOME</zones-security-zonename>\n    <zone-id>11</zone-id>\n    <zones-security-description>home networks</zones-security-description>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>1</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/3.10</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>INTERNET</zones-security-zonename>\n    <zone-id>10</zone-id>\n    <zones-security-description>public internet via comcast</zones-security-description>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>1</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/1.0</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>trust</zones-security-zonename>\n    <zone-id>7</zone-id>\n    <zones-security-send-reset>On</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>untrust</zones-security-zonename>\n    <zone-id>8</zone-id>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>junos-host</zones-security-zonename>\n    <zone-id>2</zone-id>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n</zones-information>\n",
+    "stdout": "<zones-information style=\"detail\">\n  <zones-security>\n    <zones-security-zonename>DMZ</zones-security-zonename>\n    <zone-id>12</zone-id>\n    <zones-security-description>all lab resources outside of VMware hosts</zones-security-description>\n    <zones-security-send-reset>On</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>3</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/3.201</zones-security-interface-name>\n      <zones-security-interface-name>ge-0/0/3.202</zones-security-interface-name>\n      <zones-security-interface-name>ge-0/0/3.203</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>LAN</zones-security-zonename>\n    <zone-id>11</zone-id>\n    <zones-security-description>lan networks</zones-security-description>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>1</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/3.10</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>WAN</zones-security-zonename>\n    <zone-id>10</zone-id>\n    <zones-security-description>public wan via comcast</zones-security-description>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>1</zones-security-interfaces-bound>\n    <zones-security-interfaces>\n      <zones-security-interface-name>ge-0/0/1.0</zones-security-interface-name>\n    </zones-security-interfaces>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>trust</zones-security-zonename>\n    <zone-id>7</zone-id>\n    <zones-security-send-reset>On</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>untrust</zones-security-zonename>\n    <zone-id>8</zone-id>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-screen>untrust-screen</zones-security-screen>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n  <zones-security>\n    <zones-security-zonename>junos-host</zones-security-zonename>\n    <zone-id>2</zone-id>\n    <zones-security-send-reset>Off</zones-security-send-reset>\n    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>\n    <zones-security-interfaces-bound>0</zones-security-interfaces-bound>\n    <zones-security-interfaces/>\n    <zones-security-advanced-connection-tracking-timeout>1800</zones-security-advanced-connection-tracking-timeout>\n    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>\n  </zones-security>\n</zones-information>\n",
     "stdout_lines": [
       "<zones-information style=\"detail\">",
       "  <zones-security>",
-      "    <zones-security-zonename>DMZ_LAB</zones-security-zonename>",
+      "    <zones-security-zonename>DMZ</zones-security-zonename>",
       "    <zone-id>12</zone-id>",
       "    <zones-security-description>all lab resources outside of VMware hosts</zones-security-description>",
       "    <zones-security-send-reset>On</zones-security-send-reset>",
@@ -73,9 +73,9 @@ Here's an example of what `zone_information` should look like:
       "    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>",
       "  </zones-security>",
       "  <zones-security>",
-      "    <zones-security-zonename>HOME</zones-security-zonename>",
+      "    <zones-security-zonename>LAN</zones-security-zonename>",
       "    <zone-id>11</zone-id>",
-      "    <zones-security-description>home networks</zones-security-description>",
+      "    <zones-security-description>lan networks</zones-security-description>",
       "    <zones-security-send-reset>Off</zones-security-send-reset>",
       "    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>",
       "    <zones-security-interfaces-bound>1</zones-security-interfaces-bound>",
@@ -86,9 +86,9 @@ Here's an example of what `zone_information` should look like:
       "    <zones-security-unidirectional-session-refreshing>No</zones-security-unidirectional-session-refreshing>",
       "  </zones-security>",
       "  <zones-security>",
-      "    <zones-security-zonename>INTERNET</zones-security-zonename>",
+      "    <zones-security-zonename>WAN</zones-security-zonename>",
       "    <zone-id>10</zone-id>",
-      "    <zones-security-description>public internet via comcast</zones-security-description>",
+      "    <zones-security-description>public wan via comcast</zones-security-description>",
       "    <zones-security-send-reset>Off</zones-security-send-reset>",
       "    <zones-security-policy-configurable>Yes</zones-security-policy-configurable>",
       "    <zones-security-screen>untrust-screen</zones-security-screen>",
@@ -136,7 +136,7 @@ Here's an example of what `zone_information` should look like:
       "zones-information": {
         "zones-security": [
           {
-            "zones-security-zonename": "DMZ_LAB",
+            "zones-security-zonename": "DMZ",
             "zone-id": "12",
             "zones-security-description": "all lab resources outside of VMware hosts",
             "zones-security-send-reset": "On",
@@ -154,9 +154,9 @@ Here's an example of what `zone_information` should look like:
             "zones-security-unidirectional-session-refreshing": "No"
           },
           {
-            "zones-security-zonename": "HOME",
+            "zones-security-zonename": "LAN",
             "zone-id": "11",
-            "zones-security-description": "home networks",
+            "zones-security-description": "lan networks",
             "zones-security-send-reset": "Off",
             "zones-security-policy-configurable": "Yes",
             "zones-security-interfaces-bound": "1",
@@ -167,9 +167,9 @@ Here's an example of what `zone_information` should look like:
             "zones-security-unidirectional-session-refreshing": "No"
           },
           {
-            "zones-security-zonename": "INTERNET",
+            "zones-security-zonename": "WAN",
             "zone-id": "10",
-            "zones-security-description": "public internet via comcast",
+            "zones-security-description": "public wan via comcast",
             "zones-security-send-reset": "Off",
             "zones-security-policy-configurable": "Yes",
             "zones-security-screen": "untrust-screen",
@@ -266,7 +266,7 @@ The path for filter plugins is found in the Ansible directory
     - name: "### MAP INTERFACES TO NEW LIST OBJECTS ###"
       block:
 
-        - name: "map zone DMZ_LAB interfaces"
+        - name: "map zone DMZ interfaces"
           ansible.builtin.set_fact:
             zone_ifaces: "{{ zone_information['parsed_output'] | get_zone_interfaces  }}"
 
@@ -283,21 +283,21 @@ Here's an example of what `zone_information` should look like:
 
     {
       "zone_ifaces": {
-        "dmz_lab_interfaces": [
+        "dmz_interfaces": [
           "ge-0/0/3.101",
           "ge-0/0/3.102",
           "ge-0/0/3.103"
         ],
-        "home_interfaces": [
+        "lan_interfaces": [
           "ge-0/0/3.10"
         ],
-        "internet_interfaces": [
+        "wan_interfaces": [
           "ge-0/0/1.0"
         ]
       }
     }
 
-`flows_dmz_lab`
+`flows_dmz`
 ---------------
 
 Here we loop over the DMZ list found within `zone_ifaces`. Each interface will create a seperate RPC call to find out how many security sessions are flowing through it.
@@ -306,14 +306,14 @@ Here we loop over the DMZ list found within `zone_ifaces`. Each interface will c
 
     - name: "### RETRIEVE SECURITY FLOWS PER INTERFACE ###"
       block:
-        - name: "retrieve security flows per DMZ_LAB interface"
+        - name: "retrieve security flows per DMZ interface"
           juniper_junos_rpc:
             rpc: get-flow-session-information
             kwargs:
               interface: "{{ item }}"
               summary: null
-          loop: "{{ zone_ifaces['dmz_lab_interfaces'] }}"
-          register: flows_dmz_lab
+          loop: "{{ zone_ifaces['dmz_interfaces'] }}"
+          register: flows_dmz
 
 example
 -------
