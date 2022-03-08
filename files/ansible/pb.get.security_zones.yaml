@@ -1,7 +1,7 @@
 ###------------------------------------------------------------------------
 ### RETRIEVE SECURITY SESSION FLOWS BY ZONE
 ###------------------------------------------------------------------------
-- hosts: all
+- hosts: "{{ hostname }}"
   connection: local
   gather_facts: False
   become: False
