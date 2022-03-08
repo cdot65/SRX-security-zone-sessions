@@ -1,33 +1,4 @@
 #jinja2: lstrip_blocks: "True (or False)", trim_blocks: "True (or False)"
 ---
 
-blocks:
-- type: header
-  text:
-    type: plain_text
-    text: ":robot_face: Juniper ChatBot"
-
-- type: divider
-
-- type: section
-  text:
-    type: mrkdwn
-    text: |-
-      :round_pushpin: Security Flow Report
-
-- type: divider
-
-- type: section
-  text:
-    type: mrkdwn
-    text: |-
-      Firewall: vsrx4
-
-        :white_small_square: flows_lan: *{{ flows_lan }}*
-        :white_small_square: flows_wan: *{{ flows_wan }}*
-        :white_small_square: flows_dmz: *{{ flows_dmz }}*
-
-  accessory:
-    type: image
-    image_url: https://raw.githubusercontent.com/cdot65/svg-locker-shhhhh/master/firewalls.png
-    alt_text: Firewall
+text: "Hello, world"
