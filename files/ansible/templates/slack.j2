@@ -29,6 +29,7 @@ blocks:
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% endif %}
         {% endfor %}
 
         WAN:
@@ -37,6 +38,7 @@ blocks:
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% endif %}
         {% endfor %}
 
         DMZ:
@@ -45,6 +47,7 @@ blocks:
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% endif %}
         {% endfor %}
 
   accessory:
