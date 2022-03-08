@@ -86,7 +86,7 @@
 
         - name: "Slack: post slack message"
           ansible.builtin.uri:
-            url: "https://hooks.slack.com/services/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"
+            url: "https://hooks.slack.com/services/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"
             return_content: yes
             status_code: 200
             method: POST
