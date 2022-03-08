@@ -23,9 +23,15 @@ blocks:
     text: |-
       Firewall: vsrx4
 
-        :white_small_square: flows_lan: *{{ flows_lan }}*
-        :white_small_square: flows_wan: *{{ flows_wan }}*
-        :white_small_square: flows_dmz: *{{ flows_dmz }}*
+        {% for each in flows_lan %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }}
+        {% endfor %}
+        {% for each in flows_wan %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }}
+        {% endfor %}
+        {% for each in flows_dmz %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }}
+        {% endfor %}
 
   accessory:
     type: image
