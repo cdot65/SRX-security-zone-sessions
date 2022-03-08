@@ -23,12 +23,17 @@ blocks:
     text: |-
       Firewall: vsrx4
 
+        LAN:
         {% for each in flows_lan %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }}
         {% endfor %}
+
+        WAN:
         {% for each in flows_wan %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }}
         {% endfor %}
+
+        DMZ:
         {% for each in flows_dmz %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }}
         {% endfor %}
