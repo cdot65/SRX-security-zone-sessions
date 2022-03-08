@@ -26,27 +26,27 @@ blocks:
         LAN:
         {% for each in flows_lan %}
         {% if each.flows == '0' %}
-        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
-        {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% else %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% endif %}
         {% endfor %}
 
         WAN:
         {% for each in flows_wan %}
         {% if each.flows == '0' %}
-        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
-        {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% else %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% endif %}
         {% endfor %}
 
         DMZ:
         {% for each in flows_dmz %}
         {% if each.flows == '0' %}
-        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
-        {% else %}
         :white_small_square: *{{ each.interface }}*: {{ each.flows }} :x:
+        {% else %}
+        :white_small_square: *{{ each.interface }}*: {{ each.flows }} :white_check_mark:
         {% endif %}
         {% endfor %}
 
